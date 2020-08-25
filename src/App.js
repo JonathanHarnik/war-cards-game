@@ -16,11 +16,11 @@ export default class App extends Component {
     return (
       <div>
         <h1>War Game</h1>
-        {/* <Router>
+        <Router>
           <Switch>
             <Route exact path="/" component={()=>{return <Homepage/>}}/>
           </Switch>
-        </Router> */}
+        </Router>
         
       </div>
     )
