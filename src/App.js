@@ -18,7 +18,7 @@ export default class App extends Component {
         <h1>War Game</h1>
         <Router>
           <Switch>
-            <Route exact path="/" component={()=>{return <Homepage/>}}/>
+            <Route exact path='/' component={()=>{return <Homepage/>}}/>
           </Switch>
         </Router>
         
