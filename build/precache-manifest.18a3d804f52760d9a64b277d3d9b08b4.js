@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff89a55130cfabf551fd933e08b51e30",
+    "revision": "4060bff304100b63ac4255584e8c3a0d",
     "url": "/war-cards-game/index.html"
   },
   {
-    "revision": "914fa041591a638bec9a",
+    "revision": "bc6edbcc60be2bc98274",
     "url": "/war-cards-game/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "c5f6c6e5babcfbee0a10",
-    "url": "/war-cards-game/static/js/2.390ebd08.chunk.js"
+    "revision": "d7ba17d05bf21df7c907",
+    "url": "/war-cards-game/static/js/2.66635199.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/war-cards-game/static/js/2.390ebd08.chunk.js.LICENSE.txt"
+    "url": "/war-cards-game/static/js/2.66635199.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "914fa041591a638bec9a",
-    "url": "/war-cards-game/static/js/main.c3a11e66.chunk.js"
+    "revision": "bc6edbcc60be2bc98274",
+    "url": "/war-cards-game/static/js/main.b7a00ce2.chunk.js"
   },
   {
     "revision": "ff6b429d5d08a5fda6c5",

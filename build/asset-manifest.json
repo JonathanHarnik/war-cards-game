@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/war-cards-game/static/css/main.5f361e03.chunk.css",
-    "main.js": "/war-cards-game/static/js/main.c3a11e66.chunk.js",
-    "main.js.map": "/war-cards-game/static/js/main.c3a11e66.chunk.js.map",
+    "main.js": "/war-cards-game/static/js/main.b7a00ce2.chunk.js",
+    "main.js.map": "/war-cards-game/static/js/main.b7a00ce2.chunk.js.map",
     "runtime-main.js": "/war-cards-game/static/js/runtime-main.75193e50.js",
     "runtime-main.js.map": "/war-cards-game/static/js/runtime-main.75193e50.js.map",
-    "static/js/2.390ebd08.chunk.js": "/war-cards-game/static/js/2.390ebd08.chunk.js",
-    "static/js/2.390ebd08.chunk.js.map": "/war-cards-game/static/js/2.390ebd08.chunk.js.map",
+    "static/js/2.66635199.chunk.js": "/war-cards-game/static/js/2.66635199.chunk.js",
+    "static/js/2.66635199.chunk.js.map": "/war-cards-game/static/js/2.66635199.chunk.js.map",
     "index.html": "/war-cards-game/index.html",
-    "precache-manifest.a0704daf6f3e4c0bb2b30fae7f2023dd.js": "/war-cards-game/precache-manifest.a0704daf6f3e4c0bb2b30fae7f2023dd.js",
+    "precache-manifest.18a3d804f52760d9a64b277d3d9b08b4.js": "/war-cards-game/precache-manifest.18a3d804f52760d9a64b277d3d9b08b4.js",
     "service-worker.js": "/war-cards-game/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/war-cards-game/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.390ebd08.chunk.js.LICENSE.txt": "/war-cards-game/static/js/2.390ebd08.chunk.js.LICENSE.txt"
+    "static/js/2.66635199.chunk.js.LICENSE.txt": "/war-cards-game/static/js/2.66635199.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.75193e50.js",
-    "static/js/2.390ebd08.chunk.js",
+    "static/js/2.66635199.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.c3a11e66.chunk.js"
+    "static/js/main.b7a00ce2.chunk.js"
   ]
 }
