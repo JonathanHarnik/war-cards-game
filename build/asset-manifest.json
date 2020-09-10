@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/war-cards-game/static/css/main.5f361e03.chunk.css",
-    "main.js": "/war-cards-game/static/js/main.b7a00ce2.chunk.js",
-    "main.js.map": "/war-cards-game/static/js/main.b7a00ce2.chunk.js.map",
+    "main.css": "/war-cards-game/static/css/main.1d51bbcf.chunk.css",
+    "main.js": "/war-cards-game/static/js/main.1d8838a4.chunk.js",
+    "main.js.map": "/war-cards-game/static/js/main.1d8838a4.chunk.js.map",
     "runtime-main.js": "/war-cards-game/static/js/runtime-main.75193e50.js",
     "runtime-main.js.map": "/war-cards-game/static/js/runtime-main.75193e50.js.map",
-    "static/js/2.66635199.chunk.js": "/war-cards-game/static/js/2.66635199.chunk.js",
-    "static/js/2.66635199.chunk.js.map": "/war-cards-game/static/js/2.66635199.chunk.js.map",
+    "static/js/2.25884932.chunk.js": "/war-cards-game/static/js/2.25884932.chunk.js",
+    "static/js/2.25884932.chunk.js.map": "/war-cards-game/static/js/2.25884932.chunk.js.map",
     "index.html": "/war-cards-game/index.html",
-    "precache-manifest.18a3d804f52760d9a64b277d3d9b08b4.js": "/war-cards-game/precache-manifest.18a3d804f52760d9a64b277d3d9b08b4.js",
+    "precache-manifest.d8594d2872721e7b0e181af473afd6af.js": "/war-cards-game/precache-manifest.d8594d2872721e7b0e181af473afd6af.js",
     "service-worker.js": "/war-cards-game/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/war-cards-game/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.66635199.chunk.js.LICENSE.txt": "/war-cards-game/static/js/2.66635199.chunk.js.LICENSE.txt"
+    "static/css/main.1d51bbcf.chunk.css.map": "/war-cards-game/static/css/main.1d51bbcf.chunk.css.map",
+    "static/js/2.25884932.chunk.js.LICENSE.txt": "/war-cards-game/static/js/2.25884932.chunk.js.LICENSE.txt",
+    "static/media/green-background.jpg": "/war-cards-game/static/media/green-background.ee6c2c75.jpg",
+    "static/media/hp-background.jpg": "/war-cards-game/static/media/hp-background.1d7d81d8.jpg",
+    "static/media/picnic-background.jpg": "/war-cards-game/static/media/picnic-background.f226fd9c.jpg",
+    "static/media/wood-background.jpeg": "/war-cards-game/static/media/wood-background.ea44f6c3.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.75193e50.js",
-    "static/js/2.66635199.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.b7a00ce2.chunk.js"
+    "static/js/2.25884932.chunk.js",
+    "static/css/main.1d51bbcf.chunk.css",
+    "static/js/main.1d8838a4.chunk.js"
   ]
 }

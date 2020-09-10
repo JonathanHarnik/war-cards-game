@@ -3,6 +3,7 @@ import './App.css';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 import Homepage from './components/Homepage.js';
 import Game from './components/Game.js';
+import End from './components/End.js';
 import homeImage from './images/hp-background.jpg';
 import pokerTable from './images/green-background.jpg';
 import woodenTable from './images/wood-background.jpeg';
@@ -16,16 +17,17 @@ export default class App extends Component {
       player:'',
       background:`url(${homeImage})`,
       deck:[],
-      playerCards:[],
-      compCards:[],
-      shuffled:[]
+      playerCards:'',
+      compCards:'',
+      result:''
     }
   }
  
 
+
   setPlayer=(name, background)=>{
     // setting player's name and chosen background
-    this.setState({player:name})
+    this.setState({player:{name:name, wins:0, loses:0}})
     if(background==="poker"){
       this.setState({background:`url(${pokerTable})`})
     }
@@ -40,43 +42,42 @@ export default class App extends Component {
 
   createDeck=()=>{
     // creating a deck
-    let temp=[]
+    const temp=[]
+    let suites=['♠︎','♣︎','♥︎','♦︎']
     for(let x=1; x<14; x++){
-      for(let y=1; y<5; y++){
-        temp.push({num:x, type:y})
+      for(let y=0; y<4; y++){
+        temp.push({num:x, type:suites[y]})
       }
     }
-    // saving temp into both "deck" and "shuffled" to shuffle and divide only "shuffled" and keep "deck" as an original - does not work though
     this.setState({deck:temp})
-    this.setState({shuffled:temp})
-    // this.shuffleDeck(temp);
-    
-  }
 
-  shuffleDeck=()=>{
-    // shuffling the deck
-    let shuffled=this.state.shuffled;
-    // must use .length-1 (rather than .length) b/c then shuffled[x] wont exist in the first loop
-    for(let x=shuffled.length-1; x>0; x--){
-      // randomly selecting a position within the array of the deck
-      let a=Math.floor(Math.random()*(x+1));
-      let b=shuffled[a];
-      // swapping the randomly selected element with the last element in the array
-      shuffled[a]=shuffled[x];
-      shuffled[x]=b;
+    // Spliting the deck in 2
+    let playerCards=[]
+    for(let x=1 ; x<=26 ; x++){
+      let y=Math.floor(Math.random()*27);
+      playerCards.push(temp[y]);
+      temp.splice(y,1);
     }
-    // dividing the shuffled deck in two
-    var temp1=shuffled.splice(26, 26)
-    var temp2=shuffled.splice(0,26)
-    this.setState({playerCards:temp1})
-    this.setState({compCards:temp2})
-    // Or, another way to divide:
-    // this.setState({playerCards:shuffled.splice(26, 26)})
-    // this.setState({compCards:shuffled.splice(0,26)})
-
-    // saving the shuffled deck into state
-    this.setState({shuffled:shuffled})
+    this.setState({playerCards:playerCards})
+    this.setState({compCards:temp})
   }
+
+  result=(win, lose)=>{
+    if(win>lose){
+      this.setState({result:"Win"})
+      let temp=this.state.player
+      temp.wins++
+      this.setState({player:temp})
+    }
+    else{
+      this.setState({result:"Lose"})
+      let temp=this.state.player
+      temp.loses++
+      this.setState({player:temp})
+    }
+  }
+
+
   
   
   
@@ -86,7 +87,8 @@ export default class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' component={()=>{return <Homepage setPlayer={this.setPlayer}/>}}/>
-            <Route exact path='/game' component={()=>{return <Game shuffle={this.shuffleDeck} name={this.state.player} playerCards={this.state.playerCards} compCards={this.state.compCards}/>}}/>
+            <Route exact path='/game' component={()=>{return <Game deck={this.state.deck} name={this.state.player.name} playerCards={this.state.playerCards}s compCards={this.state.compCards} result={this.result}/>}}/>
+            <Route exact path='/end' component={()=>{return <End wins={this.state.player.wins} loses={this.state.player.loses} result={this.state.result} createDeck={this.createDeck}/>}}/>
           </Switch>
         </Router>
         
