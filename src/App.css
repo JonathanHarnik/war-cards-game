@@ -67,16 +67,70 @@
   position: absolute;
   left: 20px;
   top: 20px;
-  background: rgba(255, 255, 255, 0.5);
-
+  background: rgba(255, 255, 255);
+  padding:5px;
+  border-radius: 5px;
 }
-#playerName{
+.player{
   position: absolute;
   right: 20px;
   bottom: 20px;
-  background: rgba(255, 255, 255, 0.5);
-
+  padding:5px;
+  /* overflow: hidden; */
+  cursor: pointer;
+  border-radius: 5px;
+  
 }
+#playerName{
+  background: rgba(255, 255, 255);
+  padding:5px;
+  z-index: 1;
+  border-radius: 5px;
+  
+}
+
+.playerInfo{
+  display: none;
+  background: rgba(255, 255, 255);
+  z-index: 0;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  pointer-events: none;
+}
+
+.playerInfoOpen{
+  animation: infoIn 0.5s ease-in;
+  animation-fill-mode: forwards;
+  display: block;
+}
+.playerInfoClose{
+  animation: infoOut 0.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes infoIn{
+  from{
+    opacity: 0;
+    transform: translateY(-70px)
+  }
+  to{
+    opacity: 1;
+   transform: translateY(0px)
+  }
+}
+
+@keyframes infoOut{
+  from{
+    opacity: 1;
+    transform: translateY(0px)
+  }
+  to{
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}
+
 #nextBtn{
   position: absolute;
   left: 20px;
@@ -85,6 +139,7 @@
   height: 50px;
   font-size: 22pt;
   border-radius: 5px;
+  background: red;
 
 }
 #dealBtn{
@@ -97,6 +152,7 @@
   border-radius: 5px;
   font-size: large;
   font-weight: bolder;
+  background: red;
   
 }
 
@@ -119,6 +175,7 @@
   width:150px;
   height: 250px;
   position: relative;
+  box-shadow: 10px 10px 6px rgba(51, 51, 51, 0.6);
 }
 
 .card-top{

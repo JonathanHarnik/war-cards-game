@@ -46,23 +46,42 @@ export default class App extends Component {
     let suites=['♠︎','♣︎','♥︎','♦︎']
     for(let x=1; x<14; x++){
       for(let y=0; y<4; y++){
-        temp.push({num:x, type:suites[y]})
+        temp.push({num:x, type:suites[y], value:x})
       }
     }
-    this.setState({deck:temp})
+    // Adjusting  high card num to letters
+    let newTemp=temp.map((item)=>{
+      if(item.num==1){
+        return {num:'A', type:item.type, value:item.value}
+      }
+      else if(item.num==11){
+        return {num:'J', type:item.type, value:item.value}
+      }
+      else if(item.num==12){
+        return {num:'Q', type:item.type, value:item.value}
+      }
+      else if(item.num==13){
+        return {num:'K', type:item.type, value:item.value}
+      }
+      else{
+        return item;
+      }
+    })
+    this.setState({deck:newTemp})
 
     // Spliting the deck in 2
     let playerCards=[]
     for(let x=1 ; x<=26 ; x++){
       let y=Math.floor(Math.random()*27);
-      playerCards.push(temp[y]);
-      temp.splice(y,1);
+      playerCards.push(newTemp[y]);
+      newTemp.splice(y,1);
     }
     this.setState({playerCards:playerCards})
-    this.setState({compCards:temp})
+    this.setState({compCards:newTemp})
   }
 
   result=(win, lose)=>{
+    // Saving winning/losing streaks
     if(win>lose){
       this.setState({result:"Win"})
       let temp=this.state.player
@@ -77,7 +96,9 @@ export default class App extends Component {
     }
   }
 
-
+  setHomePage=()=>{
+    this.setState({background:`url(${homeImage})`})
+  }
   
   
   
@@ -87,8 +108,8 @@ export default class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' component={()=>{return <Homepage setPlayer={this.setPlayer}/>}}/>
-            <Route exact path='/game' component={()=>{return <Game deck={this.state.deck} name={this.state.player.name} playerCards={this.state.playerCards}s compCards={this.state.compCards} result={this.result}/>}}/>
-            <Route exact path='/end' component={()=>{return <End wins={this.state.player.wins} loses={this.state.player.loses} result={this.state.result} createDeck={this.createDeck}/>}}/>
+            <Route exact path='/game' component={()=>{return <Game deck={this.state.deck} name={this.state.player.name} playerCards={this.state.playerCards} compCards={this.state.compCards} wins={this.state.player.wins} loses={this.state.player.loses} result={this.result}/>}}/>
+            <Route exact path='/end' component={()=>{return <End wins={this.state.player.wins} loses={this.state.player.loses} result={this.state.result} createDeck={this.createDeck} setHomePage={this.setHomePage}/>}}/>
           </Switch>
         </Router>
         

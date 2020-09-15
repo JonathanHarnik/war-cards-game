@@ -6,7 +6,7 @@ import Cards from './Cards.js';
 export default class Game extends Component {
     constructor(props) {
         super(props)
-    
+        this.divInfo=React.createRef();
         this.state = {
             style:{opacity:0, pointerEvents:"none"},
             compCards:this.props.compCards,
@@ -50,11 +50,12 @@ export default class Game extends Component {
         else{
             this.props.result(this.state.win, this.state.lose)
         }
-        if(this.state.compCard.num>this.state.playerCard.num){
-            this.setState({win:this.state.win+1})
+        // Comparing the value and not the num b/c of J, Q, K, A cards
+        if(this.state.compCard.value>=this.state.playerCard.value){
+            this.setState({lose:this.state.lose+1})
         }
         else{
-            this.setState({lose:this.state.lose+1})
+            this.setState({win:this.state.win+1})
         }
         let x= Math.floor(Math.random()*this.state.counter);
         this.setState({compCard:this.state.compCards[x]})
@@ -85,6 +86,21 @@ export default class Game extends Component {
         }
     }
 
+    showInfo=()=>{
+        const div=this.divInfo.current;
+        div.classList.remove('playerInfoClose');
+        div.classList.add('playerInfoOpen');
+        
+    }
+
+    hideInfo=()=>{
+        const div=this.divInfo.current;
+        div.classList.add('playerInfoClose');
+        // If we remove the below, the animation on playerInfoClose doesnt work
+        // div.classList.remove('playerInfoOpen');
+    }
+
+    
     
     render() {
         return (
@@ -92,8 +108,14 @@ export default class Game extends Component {
                 <h1 id="compName">Computer</h1>
                 {this.show()}
                 <Link to='/end' onClick={(e)=>{this.deal(e)}}><button style={this.state.style} id="nextBtn" >Next</button></Link>
-                <h1 id="playerName">{this.props.name}</h1>
-                
+                <div className="player" >
+                <div ref={this.divInfo} className="playerInfo">
+                    <h3>{this.props.name}</h3>
+                    <h4>Total wins:{this.props.wins}</h4>
+                    <h4>Total loses:{this.props.loses}</h4>
+                </div>
+                    <h1 id="playerName" onMouseEnter={this.showInfo} onMouseLeave={this.hideInfo}>{this.props.name}</h1>
+                </div>
             </div>
         )
     }

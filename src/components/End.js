@@ -18,7 +18,7 @@ export default class End extends Component {
                     <h1 className="result-title">{this.props.result}</h1>
                     <h3 className="total-results">{this.props.wins}-{this.props.loses}</h3>
                     <Link to='/game'><button onClick={()=>{this.props.createDeck()}} className="result-btn">Again</button></Link>
-                    <Link to='/'><button className="result-btn">Sign out</button></Link>
+                    <Link to='/' onClick={this.props.setHomePage}><button className="result-btn">Sign out</button></Link>
                 </div>
                 
             </div>
