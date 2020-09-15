@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/war-cards-game/precache-manifest.53d7e802b991d8ab884ff60ad2bc7db5.js"
+  "/war-cards-game/precache-manifest.6e929d5c81f1a13101b8cac54829b090.js"
 );
 
 self.addEventListener('message', (event) => {

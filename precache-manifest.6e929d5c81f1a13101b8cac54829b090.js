@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff84e6a40146e151efc1b2a036f2c7fe",
+    "revision": "88bfd7c69c2a1cd3f40cf40e07de00a5",
     "url": "/war-cards-game/index.html"
   },
   {
-    "revision": "c2aca3707d570bceaf12",
-    "url": "/war-cards-game/static/css/main.088129a4.chunk.css"
+    "revision": "72798dde9c44cf0ede25",
+    "url": "/war-cards-game/static/css/main.9a580a3a.chunk.css"
   },
   {
-    "revision": "cea7ccdf57c4fe81f7ea",
-    "url": "/war-cards-game/static/js/2.da2bda48.chunk.js"
+    "revision": "ca712680485fa8a294ad",
+    "url": "/war-cards-game/static/js/2.5c276777.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/war-cards-game/static/js/2.da2bda48.chunk.js.LICENSE.txt"
+    "url": "/war-cards-game/static/js/2.5c276777.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c2aca3707d570bceaf12",
-    "url": "/war-cards-game/static/js/main.833cedc6.chunk.js"
+    "revision": "72798dde9c44cf0ede25",
+    "url": "/war-cards-game/static/js/main.349075b4.chunk.js"
   },
   {
     "revision": "ff6b429d5d08a5fda6c5",
